@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7965302331629BE78F5DC362 /* Pods_ObjectDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC76D9449601510F79B67CC /* Pods_ObjectDetection.framework */; };
 		AA055D8921622F3E00B25948 /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = AA055D8821622F3E00B25948 /* labelmap.txt */; };
 		AA119EA2217F337300DE46CF /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA119EA1217F337300DE46CF /* ModelDataHandler.swift */; };
 		AA16E59B21807BAC00D9E153 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA16E59921807A7000D9E153 /* InfoCell.swift */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FC76D9449601510F79B67CC /* Pods_ObjectDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		343CE15311F40959F75BCDC5 /* Pods-ObjectDetection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectDetection.release.xcconfig"; path = "Target Support Files/Pods-ObjectDetection/Pods-ObjectDetection.release.xcconfig"; sourceTree = "<group>"; };
 		AA055D8821622F3E00B25948 /* labelmap.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
 		AA119EA1217F337300DE46CF /* ModelDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
 		AA16E59921807A7000D9E153 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		AAB1116B21511218008C215D /* detect.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = detect.tflite; sourceTree = "<group>"; };
 		AAC58494214797E800FB532F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		AAEF3D8C21A2BE2B0073AE1C /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		DCDCC3D35E9766D56817A819 /* Pods-ObjectDetection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectDetection.debug.xcconfig"; path = "Target Support Files/Pods-ObjectDetection/Pods-ObjectDetection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +57,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7965302331629BE78F5DC362 /* Pods_ObjectDetection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22FECC88586AB5571CD5B590 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCDCC3D35E9766D56817A819 /* Pods-ObjectDetection.debug.xcconfig */,
+				343CE15311F40959F75BCDC5 /* Pods-ObjectDetection.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AA09263B212D730700D5890F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +114,8 @@
 			children = (
 				AA9AC59D212D39FC000B4E9D /* ObjectDetection */,
 				AA9AC59C212D39FC000B4E9D /* Products */,
+				22FECC88586AB5571CD5B590 /* Pods */,
+				D0BB77D343B607A4DC620C31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +172,14 @@
 			path = ModelDataHandler;
 			sourceTree = "<group>";
 		};
+		D0BB77D343B607A4DC620C31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FC76D9449601510F79B67CC /* Pods_ObjectDetection.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,6 +187,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA9AC5C3212D39FD000B4E9D /* Build configuration list for PBXNativeTarget "ObjectDetection" */;
 			buildPhases = (
+				CDDA0D7D44207E4A985BBFA2 /* [CP] Check Pods Manifest.lock */,
 				AA055D8A21622F7C00B25948 /* ShellScript */,
 				AA9AC597212D39FC000B4E9D /* Sources */,
 				AA9AC598212D39FC000B4E9D /* Frameworks */,
@@ -189,7 +214,7 @@
 				TargetAttributes = {
 					AA9AC59A212D39FC000B4E9D = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -243,6 +268,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$SRCROOT/RunScripts/download_models.sh\"\n";
+		};
+		CDDA0D7D44207E4A985BBFA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ObjectDetection-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -406,12 +453,13 @@
 		};
 		AA9AC5C4212D39FD000B4E9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCDCC3D35E9766D56817A819 /* Pods-ObjectDetection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 854BWQZZUK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -422,24 +470,25 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.ObjectDetection;
+				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.ObjectDetection.lucky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		AA9AC5C5212D39FD000B4E9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 343CE15311F40959F75BCDC5 /* Pods-ObjectDetection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 854BWQZZUK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -450,11 +499,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.ObjectDetection;
+				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.ObjectDetection.lucky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
